@@ -50,14 +50,7 @@ const styles = StyleSheet.create({
   titleWrapper: {
     marginTop: 10,
     position: 'absolute',
-    ...Platform.select({
-      ios: {
-        top: 20,
-      },
-      android: {
-        top: 5,
-      },
-    }),
+    top: (Platform.OS === 'ios') ? 20 : 5,
     left: 0,
     right: 0,
   },
@@ -65,14 +58,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#EFEFF2',
     paddingTop: 0,
     top: 0,
-    ...Platform.select({
-      ios: {
-        height: 64,
-      },
-      android: {
-        height: 54,
-      },
-    }),
+    height: (Platform.OS === 'ios') ? 64 : 54,
     right: 0,
     left: 0,
     borderBottomWidth: 0.5,
@@ -82,14 +68,7 @@ const styles = StyleSheet.create({
   backButton: {
     height: 37,
     position: 'absolute',
-    ...Platform.select({
-      ios: {
-        top: 22,
-      },
-      android: {
-        top: 10,
-      },
-    }),
+    top: (Platform.OS === 'ios') ? 22 : 10,
     left: 2,
     padding: 8,
     flexDirection: 'row',
@@ -97,28 +76,14 @@ const styles = StyleSheet.create({
   rightButton: {
     height: 37,
     position: 'absolute',
-    ...Platform.select({
-      ios: {
-        top: 22,
-      },
-      android: {
-        top: 10,
-      },
-    }),
+    top: (Platform.OS === 'ios') ? 22 : 10,
     right: 2,
     padding: 8,
   },
   leftButton: {
     height: 37,
     position: 'absolute',
-    ...Platform.select({
-      ios: {
-        top: 20,
-      },
-      android: {
-        top: 8,
-      },
-    }),
+    top: (Platform.OS === 'ios') ? 20 : 8,
     left: 2,
     padding: 8,
   },
